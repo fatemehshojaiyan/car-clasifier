@@ -50,5 +50,6 @@ demo = gr.Interface(
 
 if __name__ == "__main__":
     print("Starting application...")
-    demo.launch(server_name="0.0.0.0", server_port=10000)
+    port = int(os.environ.get("PORT", 8080))
+    demo.launch(server_name="0.0.0.0", server_port=port)
 
